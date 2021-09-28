@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Part 1</title>
+	<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="angular">
+	<div ng-controller="MainController">
+		<ul>
+			<li> {{ list[0]}} </li>
+			<li> {{ list[1]}} </li>
+			<li> {{ list[2]}} </li>
+			<li> {{ list[3]}} </li>
+		</ul>
+	</div>
+
+	<div ng-controller = "MainController">
+		<div ng-repeat = "item in list">
+			<li> {{ item }} </li>
+		</div>
+	</div>
+
+	<div ng-controller="GreetingController">
+  {{ greeting }}
+</div>
+
+	<div ng-controller="Pl">
+  {{ list[0] }}
+  {{ list[1] }}
+</div>
+<div ng-controller="multiply" ng-init="num=0">
+	 Two times <input ng-model="num"> equals {{ product(num) }}
+</div>
+<div ng-controller = "getadd">
+	Enter Number : <input type="text" ng-model="num1">
+	<br>
+	Enter Another : <input type = "text" ng-model="num2">
+	<input type="button" ng-model="add" ng-click="add(num1,num2)" value="Add">
+	<br>
+	{{ txtsum }} {{ sum }}
+</div>
+
+	<script src ="js/app.js"></script>
+	<script src = "js/MainController/MainController.js"></script>
+</body>
+</html>
